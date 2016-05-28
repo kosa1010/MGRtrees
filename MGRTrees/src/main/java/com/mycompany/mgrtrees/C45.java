@@ -40,8 +40,10 @@ public class C45 {
             for (int i = 0; i < subS.length; i++) {
                 double subentropy = 0;
                 for (int k = 0; k < partSubs[i].length; k++) {
-                    subentropy += (double) partSubs[i][k] / subS[i]
-                            * (Math.log((double) partSubs[i][k] / (double) subS[i]) / Math.log(2));
+                    if ((double) partSubs[i][k] / subS[i] != 0) {
+                        subentropy += (double) partSubs[i][k] / subS[i]
+                                * (Math.log((double) partSubs[i][k] / (double) subS[i]) / Math.log(2));
+                    }
                 }
                 subEntropy.add(subentropy);
             }
