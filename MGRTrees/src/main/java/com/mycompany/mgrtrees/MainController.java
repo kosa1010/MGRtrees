@@ -6,6 +6,7 @@
 package com.mycompany.mgrtrees;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -47,6 +48,9 @@ public class MainController {
 
     private static void buildtreeC45() {//ArrayList<DataObject> dObj, String... param) {
         C45 c45 = new C45();
+        List<int[]> listOfSubsets = new ArrayList<>();
+        listOfSubsets = c45.countDataSubsets(data, heather);
+        System.out.println(c45.countDataSubsets(data, heather);
         entropy = c45.calcEntropy(C45.ENTROPY.ATTRIBUTE, 10, b, partOfSubsets2);
         System.out.println("etropia atr2 " + entropy);
         entropies.add(entropy);
